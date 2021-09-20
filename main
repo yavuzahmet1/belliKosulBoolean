@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double kullanıcıGiris, kdv1 = 0.18, kdv2 = 0.08, kdvliTutar, kdvTutar;
+
+        System.out.print("Lütfen Fiyat giriniz\t:");
+        kullanıcıGiris = scanner.nextDouble();
+        if (kullanıcıGiris < 0) {
+            System.out.println("Geçersiz sayı girdiniz girdiğiniz sayı:\t:" + kullanıcıGiris);
+            return;
+        }else {
+            boolean a = kullanıcıGiris > 0 && kullanıcıGiris < 100;
+            System.out.println(a ? kullanıcıGiris * kdv1 + kullanıcıGiris : kullanıcıGiris * kdv2 + kullanıcıGiris);
+        }
+
+    }
+}
